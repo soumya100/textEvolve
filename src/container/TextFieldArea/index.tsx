@@ -15,8 +15,9 @@ const TextFieldAreaContainer = () => {
        handleUpperCaseClick={handleUpperCaseClick} handleLowerCaseClick={handleLowerCaseClick}
       handleClearText={handleClearText} handleCopyToClipBoard={handleCopyToClipBoard}
        handleRemoveExtraSpaces={handleRemoveExtraSpaces} handleAlternatingText={handleAlternatingText} handleUnderLine={handleUnderLine}/>
-      <TextInfo charNo={textData.length} wordNo={textData.length > 0? textData.split(' ').length : 0} 
-        lowerCaseNumber={textData.split('').filter(char => char === char.toLowerCase()).length} upperCaseNumber={textData.split('').filter(char => char === char.toUpperCase()).length}
+      <TextInfo charNo={textData.length} wordNo={textData.length > 0 ? textData.trim().split(/\s+/).length : 0} 
+        lowerCaseNumber={textData.split('').filter(char => char!==' ' && char === char.toLowerCase()).length} 
+        upperCaseNumber={textData.split('').filter(char => char!==' ' && char === char.toUpperCase()).length}
       />
     </>
   )
