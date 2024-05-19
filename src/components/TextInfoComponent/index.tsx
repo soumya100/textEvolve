@@ -17,7 +17,7 @@ const TextInfo: FC<TextInfoProps> = ({ charNo, wordNo, upperCaseNumber, lowerCas
         <h3 className='text-xl font-extrabold underline '>
             Text Information
         </h3>
-        <p className='text-sm font-semibold text-zinc-400'>
+        <p className='text-sm font-semibold text-zinc-400 leading-9'>
             There are <span className={spanTxtCls}>
                 {charNo}
             </span>
